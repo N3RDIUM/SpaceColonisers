@@ -8,7 +8,7 @@ _**Explore the universe!**_
 
 
 ## Overview
-This is a game designed in [JavaScript](https://www.oracle.com/java/technologies/) in which the Earth is engulfed by the sun and we have to get to a planet which can hold life and start colonising others, untill we colonise the whole universe. There will be some problems,though!/s/s 
+This is a game designed in [JavaScript](https://www.oracle.com/java/technologies/) in which the Earth is engulfed by the sun and we have to get to a planet which can hold life and start colonising others, untill we colonise the whole universe. There will be some problems,though!
 
 ## How to run game
 

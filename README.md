@@ -13,5 +13,7 @@ This is a game designed in [JavaScript](https://www.oracle.com/java/technologies
 ## How to run game
 
 1. Click on the link:
+
 [![Generic badge](https://img.shields.io/badge/Warning-Work_in_progress-red.svg)](https://user-images.githubusercontent.com/74598401/115232433-51f03480-a134-11eb-8f58-f14b52d9e230.png)
+
 [![Generic badge](https://img.shields.io/badge/To_play-Click_me-brightgreen.svg)](https://somePythonProgrammer.github.io/SpaceColonisers)

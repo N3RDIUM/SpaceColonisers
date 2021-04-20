@@ -1,7 +1,7 @@
 
 
 function setup(){
-    createCanvas(windowWidth-500,windowHeight-2000)
+    canvas = createCanvas(windowWidth-0,windowHeight-0)
 }
 
 function preload(){
@@ -9,5 +9,6 @@ function preload(){
 }
 
 function draw(){
-    text('sjsjsj',130,10,300,20)
+    resizeCanvas(windowWidth-0,windowHeight-0)
+    background('black')
 }  

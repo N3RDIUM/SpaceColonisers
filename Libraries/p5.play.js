@@ -299,7 +299,7 @@ p5.prototype._onmousedown = function(e) {
   this._setProperty('mouseIsPressed', true);
   this._setMouseButton(e);
   this._updateNextMouseCoords(e);
-  this._updateNextTouchCoords(e);
+  //this._updateNextTouchCoords(e);
   if (typeof context.mousePressed === 'function') {
     executeDefault = context.mousePressed(e);
     if (executeDefault === false) {
@@ -4089,8 +4089,8 @@ p5.prototype.createEdgeSprites = function() {
 
   var edgeThickness = 100;
 
-  var width = this._curElement.elt.offsetWidth;
-  var height = this._curElement.elt.offsetHeight;
+  var width = this.width;
+  var height = this.height;
 
   this.leftEdge = this.createSprite(-edgeThickness / 2, height / 2, edgeThickness, height);
   this.rightEdge = this.createSprite(width + (edgeThickness / 2), height / 2, edgeThickness, height);

@@ -14,4 +14,4 @@ This is a game designed in [JavaScript](https://www.oracle.com/java/technologies
 
 1. Click on the link:
 
-[![Generic badge](https://img.shields.io/badge/To_play-Click_me-brightgreen.svg)]()
+[![Generic badge](https://img.shields.io/badge/To_play-Click_me-brightgreen.svg)](https://somePythonProgrammer.github.io/SpaceColonisers)

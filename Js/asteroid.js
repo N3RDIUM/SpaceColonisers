@@ -1,6 +1,7 @@
 class Asteroid extends BaseClass {
     constructor(){
       super(0,0,50,50,false);
+      this.options.friction = 1
       this.x = random(-windowWidth,windowWidth)
       this.y = random(-windowHeight,windowHeight)
       this.rad = random(130,100)

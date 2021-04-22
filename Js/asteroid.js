@@ -1,10 +1,15 @@
 class Asteroid extends BaseClass {
     constructor(){
-      super(random(-windowWidth,windowWidth),random(-windowHeight,windowHeight),50,50);
-      this.rad = random(50,130)
-      this.width = this.rad
-      this.height = this.rad
+      super(0,0,50,50,false);
+      this.x = random(-windowWidth,windowWidth)
+      this.y = random(-windowHeight,windowHeight)
+      this.rad = random(130,100)
+      this.body = Matter.Bodies.circle(this.x, this.y, this.rad/2-10, this.options)
+      World.add(world, this.body);
+      super.width = this.rad
+      super.height = this.rad
       this.image = loadImage("Images/Asteroid.png");
+      this.explosion = loadImage('Images/explode.png')
       this.rotation=random(-5,5)
     }
   

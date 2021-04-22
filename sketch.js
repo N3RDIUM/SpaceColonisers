@@ -5,6 +5,7 @@ const Render = Matter.Render;
 
 var engine, world;
 var asteroids = []
+var player;
 
 function preload(){
 
@@ -15,8 +16,9 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
     world.gravity.y = 0
+    player = new Player()
     Engine.run(engine)
-    var rand = random(45,80)
+    var rand = random(30,60)
     for(var i=0;i<rand;i++){
         asteroids.push(new Asteroid())
     }
@@ -28,4 +30,5 @@ function draw(){
     for(var i=0;i<asteroids.length;i++){
         asteroids[i].display()
     }
+    player.display()
 }  

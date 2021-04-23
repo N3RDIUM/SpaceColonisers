@@ -18,7 +18,7 @@ function setup(){
     world.gravity.y = 0
     player = new Player()
     Engine.run(engine)
-    var rand = random(30,60)
+    var rand = random(40,100)
     for(var i=0;i<rand;i++){
         asteroids.push(new Asteroid())
     }

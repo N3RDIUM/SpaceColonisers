@@ -1,10 +1,10 @@
 class Asteroid extends BaseClass {
     constructor(){
       super(0,0,50,50,false);
-      this.options.friction = 0
-      this.options.restitution = 0.0
-      this.x = random(-windowWidth,windowWidth)
-      this.y = random(-windowHeight,windowHeight)
+      this.options.friction = 1
+      this.options.restitution = 0.5
+      this.x = random(-10000,10000)
+      this.y = random(-10000,10000)
       this.rad = random(130,100)
       this.body = Matter.Bodies.circle(this.x, this.y, this.rad/2-10, this.options)
       World.add(world, this.body);

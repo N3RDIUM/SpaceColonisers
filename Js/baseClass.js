@@ -20,7 +20,6 @@ class BaseClass{
             rotate(angle);
             imageMode(CENTER);
             image(this.image, 0, 0, this.width, this.height);
-          
-          pop();
+            pop();
         }
 }

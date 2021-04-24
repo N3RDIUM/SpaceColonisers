@@ -8,17 +8,19 @@ class Player extends BaseClass {
   
     display(){
       super.display();
-      camera.on()
       if(keyDown('W')){Matter.Body.applyForce(this.body,this.body.position,{x:0,y:-5})}
-      else if(keyDown('S')){Matter.Body.applyForce(this.body,this.body.position,{x:0,y:5})}
-      else if(keyDown('A')){Matter.Body.applyForce(this.body,this.body.position,{x:-5,y:0})}
-      else if(keyDown('D')){Matter.Body.applyForce(this.body,this.body.position,{x:5,y:0})}
-      else if(keyDown('Q')){this.av-=0.1}
-      else if(keyDown('E')){this.av+=0.1}
-      camera.position.x = this.body.position.x
-      camera.position.y = this.body.position.y
+      if(keyDown('S')){Matter.Body.applyForce(this.body,this.body.position,{x:0,y:5})}
+      if(keyDown('A')){Matter.Body.applyForce(this.body,this.body.position,{x:-5,y:0})}
+      if(keyDown('D')){Matter.Body.applyForce(this.body,this.body.position,{x:5,y:0})}
+      if(keyDown('Q')){this.av-=0.1}
+      if(keyDown('E')){this.av+=0.1}
+      camera.on()
       Matter.Body.setAngularVelocity(this.body,this.av)
-      console.log([camera.position.x,camera.position.x])
       this.av *= 0.986
+    }
+
+    updatePos(){
+      camera.position.x = (camera.position.x+this.body.position.x)/2
+      camera.position.y = (camera.position.y+this.body.position.y)/2
     }
 }

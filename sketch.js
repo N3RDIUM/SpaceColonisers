@@ -3,8 +3,10 @@ const World= Matter.World;
 const Bodies = Matter.Bodies;
 const Render = Matter.Render;
 
+var camera = p5.Camera()
 var engine, world;
 var asteroids = []
+var cam = {x:0,y:0}
 var player;
 
 function preload(){
@@ -16,19 +18,25 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
     world.gravity.y = 0
-    player = new Player()
     Engine.run(engine)
-    var rand = random(40,100)
+    var rand = random(500,700)
     for(var i=0;i<rand;i++){
         asteroids.push(new Asteroid())
     }
+    player = new Player()
+    document.oncontextmenu = function() { return false; }
 }
 
 function draw(){
-    resizeCanvas(windowWidth-0,windowHeight-0)
     background('black')
+    player.display()
+    player.updatePos()
     for(var i=0;i<asteroids.length;i++){
         asteroids[i].display()
     }
-    player.display()
+    drawSprites()
 }  
+
+function windowResized(){
+    resizeCanvas(windowWidth-0,windowHeight-0)
+}

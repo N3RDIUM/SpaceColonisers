@@ -33,7 +33,6 @@ function draw(){
     player.updatePos()
     for(var i=0;i<asteroids.length;i++){
         asteroids[i].display()
-        asteroids[i].explode()
     }
     drawSprites()
 }  

@@ -1,8 +1,8 @@
 class Asteroid extends BaseClass {
     constructor(){
       super(0,0,50,50,false);
-      this.options.friction = 1
-      this.options.restitution = 0.5
+      this.options.friction = 0
+      this.options.restitution = 0.0
       this.x = random(-10000,10000)
       this.y = random(-10000,10000)
       this.rad = random(130,100)
@@ -12,12 +12,12 @@ class Asteroid extends BaseClass {
       super.height = this.rad
       this.image = loadImage("Images/Asteroid.png");
       this.explosion = loadImage('Images/explode.png')
-      this.rotation=random(-5,5)
+      this.rotation=random(-0.04,0.04)
     }
   
     display(){
       super.display();
       Matter.Body.setAngularVelocity(this.body, this.rotation);
-      Matter.Body.applyForce(this.body,this.body.position,{x:random(-1,1),y:random(-1,1)})
+      Matter.Body.applyForce(this.body,this.body.position,{x:random(-3,3),y:random(-3,3)})
     }
 }

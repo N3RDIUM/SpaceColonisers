@@ -19,7 +19,7 @@ function setup(){
     world = engine.world;
     world.gravity.y = 0
     Engine.run(engine)
-    var rand = random(500,700)
+    var rand = random(300,400)
     for(var i=0;i<rand;i++){
         asteroids.push(new Asteroid())
     }
@@ -33,6 +33,7 @@ function draw(){
     player.updatePos()
     for(var i=0;i<asteroids.length;i++){
         asteroids[i].display()
+        asteroids[i].explode()
     }
     drawSprites()
 }  
